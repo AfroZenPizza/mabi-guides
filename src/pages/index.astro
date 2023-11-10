@@ -1,0 +1,117 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+const pageTitle = "Mabi Guides";
+---
+
+<Layout title={pageTitle}>
+	<main>
+		<!-- <ul>
+			<li><a href="guides/airship">Commerce Airship</a></li>
+		</ul> -->
+		<h1>Welcome to Mabinogi eye-friendly guides</h1>
+		<p>Firstly, I would like to start of with no assumptions going into 
+		this. That being said if you have arrived here with no idea as to what 
+		Mabinogi is, take a moment and jump over to the official Nexon website 
+		for <a href="https://mabinogi.nexon.net/" target="_blank">Mabinogi</a>
+		and start downloading a new addiction, where you will have a great time
+		meeting new people, and exploring what will soon become your online 
+		home.</p>
+		<p> From here, it should be safe to say you have an understanding of
+		what Mabinogi is, so on to what the guides are. Currently Mabinogi's
+		cliff wall of content and progression is best documented in two ways,
+		the <a href="https://wiki.mabinogiworld.com/" target="blank">
+		MabinogiWorld's Wiki</a> and a collection of Google docs that are
+		summerized in a Google doc called the 
+		<a href="https://docs.google.com/document/d/1oXG_vtjkVxWWxez9u8yINlVkEUezl7RnvymKnoCbfNU/edit"
+		target="_blank">Mabinogi Guide to Guides</a>. There is a mountain of
+		great information that many players have contributed many hours to so
+		that new and returning players can quickly get up to speed. These are
+		seriously great resources that are constantly being expanded upon.
+		</p>
+		<p>So, now we are here, at the Mabinogi eye-friendly guides, which
+		has the hope of doing multiple things for the guides. First and foremost
+		moving them out of a single software ecosystem, and off a word processor
+		to simple text files, which are then rendered into webpages here. These
+		files will use <a href="https://www.markdownguide.org" target="_blank">Markdown</a>
+		which is designed to be human readable wherever. There are open source
+		softwares that can then take this and present it in whatever way best
+		fits you - the viewer. For the purposes here, we're using Astro just to
+		get everything up and moving quickly.
+		</p>
+		<p>With all that out of the way - if your guide is here and you would
+		like it removed, please reach out to me on Discord @AfroZenPizza, or
+		in Mabinogi with a note to Tsumuku. It is not my goal to steal, profit,
+		or otherwise misrepresent any content. This is mostly for myself and
+		those that I play with that are also avid dark-mode users.
+		</p>
+		<p>Enough with the chit-chat! Can I interest you in a couple guides?</p>
+		<Card 
+		    title="Airship"
+			body="A quick rundown of being on an Airship for commerce"
+			href="guides/airship" />
+	</main>
+</Layout>
+
+<style>
+	a {
+		color:white;
+		font-weight: lighter;
+	}
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
